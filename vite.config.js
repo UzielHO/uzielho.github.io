@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: 'http://uzielho.github.io/uzielho.github.io',
+  base: '/secta-banditos-app/',
 });
