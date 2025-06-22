@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Alfredino SemiMono';
+  src: url('../assets/fonts/alfredino-semimono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.navbar {
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  top: 0%;
+  background-color: #ff1616;
+  color: white;
+}
+.link {
+  margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+}
+.boton {
+  width: 30px;
+  height: 20px;
+}

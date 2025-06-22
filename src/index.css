@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Alfredino SemiMono';
+  src: url('./assets/fonts/alfredino-semimono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

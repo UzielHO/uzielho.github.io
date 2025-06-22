@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Alfredino SemiMono';
+  src: url('../assets/fonts/alfredino-semimono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 16rem;              /* 16 * 1rem = 256px */
+  background-color: #ffbb00; /* color tipo teal oscuro */
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Alfredino SemiMono', monospace;
+}
+
+/* Cuando está abierto */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Título */
+.sidebar .sidebar-header {
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Lista de navegación */
+.sidebar nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada ítem */
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e94444;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+/* Hover */
+.sidebar .nav-item:hover {
+  background-color: #ce9700;
+}
+
+/* Ítem activo */
+.sidebar .nav-item.active {
+  background-color: #880000;
+}
+
+/* Icono dentro del ítem */
+.sidebar .nav-item .icon {
+  margin-right: 1rem;
+}
+
+/* Botón hamburguesa */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: #005f73;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 50;
+}
+
+@media (min-width: 768px) {
+  /* En pantallas md+, siempre abierto */
+  .sidebar {
+    transform: translateX(0);
+  }
+  .toggle-btn {
+    display: none;
+  }
+   .close-btn {
+    display: none;
+  }
+}
+/* Botón para cerrar el menú (solo en mobile) */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
